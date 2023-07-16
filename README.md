@@ -28,6 +28,16 @@
   - 视频：Video Caption + VQA
   - LLM
 
+## Plan
+计划先在两个demo上完成元素检测+移除
+
+移除篮球尝试zero-shot segmentation，安慕希的分割可能精度不够，考虑采用few-shot微调一下
+
+### Demo1: 两年半练习生
+分别尝试移除人和篮球
+### Demo2：跑男（截取一个几分钟片段）
+分别尝试移除人和安慕希
+
 ## Getting Start
 TODO
 
