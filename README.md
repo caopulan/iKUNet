@@ -19,8 +19,8 @@
 ## iKUNet
 关键技术：
 - 元素检测
-  - 人: Detection + Face Recognition + Matting
-  - 物品: (zero-shot/one-shot) Segmenation
+  - 人: Detection + Face Recognition + Segmentation
+  - 物品: (zero-shot/one-shot) Segmentation
 - 元素移除: Video Inpainting
 - 逻辑一致性检测：
   - 字幕：OCR
@@ -28,8 +28,26 @@
   - 视频：Video Caption + VQA
   - LLM
 
+### 元素检测
+```element_segmentation```
+
+#### (1) 人
+Model: Mask2Former COCO Instance + Face Recognition
+
+#### (2) 物品(category)
+Model: Mask2Former COCO Instance
+
+#### (3) 物品(reference + tracking)
+面向较单一场景，如篮球舞蹈中的篮球一直在画面内，仅做这一个片段
+Model: Inpaint-Anything (SAM-point/box + tracking)
+
+#### (4) 物品(zero-shot/few-shot)
+面向长时间视频，如综艺节目，场景一直在变化
+
+
+
 ## Plan
-计划先在两个demo上完成元素检测+移除
+计划先在两个demo上完成元素检测+移除（仿照InpaintAnything流程，修改分割部分）
 
 移除篮球尝试zero-shot segmentation，安慕希的分割可能精度不够，考虑采用few-shot微调一下
 
@@ -46,7 +64,8 @@ TODO
 我们欢迎来自开源社区和知乎的开发者贡献代码，尤其是关于逻辑一致性检测模块。同时，任何想法也欢迎提交issue或知乎评论。
 
 ## Acknowledgement
-https://weibo.com/caizicaixukun
+- [Inpaint Anything](https://github.com/geekyutao/Inpaint-Anything)
+- https://weibo.com/caizicaixukun
 
 ## Citation
 ```
