@@ -66,7 +66,10 @@
 TODO
 
 ## Contribution
+（群200人了加我小号微信我拉你们，大家真的好热情，kunkun冲！）
+
 <img src="./ikunnet_wechat.jpg" width="240">
+
 我们欢迎来自开源社区和知乎的开发者贡献代码，尤其是关于逻辑一致性检测模块。同时，任何想法也欢迎提交issue或知乎评论。
 
 ## Acknowledgement
